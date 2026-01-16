@@ -1,0 +1,24 @@
+@mixin transition($props: all, $duration: .2s, $timing: linear) {
+    transition: $props $duration $timing;
+}
+
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+%box-style {
+    padding: 3rem 2rem;
+    background: $white;
+    outline: $outline;
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: $box-shadow;
+
+    &:hover {
+        outline: $outline-hover;
+        outline-offset: 0;
+    }
+}

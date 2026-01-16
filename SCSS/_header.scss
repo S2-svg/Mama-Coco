@@ -1,0 +1,220 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    @include flex-center(row, space-between, center);
+    padding: 2rem 9%;
+    background: $white;
+    box-shadow: $box-shadow;
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        color: $black;
+
+        i {
+            color: $orange;
+        }
+
+    }
+
+    .navbar {
+        a {
+            font-size: 1.7rem;
+            margin: 0 1rem;
+            color: $black;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+
+    .icons {
+        div {
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: .5rem;
+            background: $light-white;
+            color: $black;
+            font-size: 2rem;
+            margin-left: .3rem;
+            cursor: pointer;
+            text-align: center;
+
+            &:hover {
+                background: $orange;
+                color: $white;
+            }
+        }
+    }
+
+    #menu-btn {
+        display:inline-block;
+    }
+
+    .search-form {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 50rem;
+        height: 5rem;
+        background: $white;
+        border-radius: .5rem;
+        overflow: hidden;
+        @include flex-center(row, flex-start, center);
+        box-shadow: $box-shadow;
+        @include transition(right, .4s, linear);
+
+        &.active {
+            right: 2rem;
+        }
+
+        input {
+            height: 100%;
+            width: 100%;
+            background: none;
+            text-transform: none;
+            font-size: 1.6rem;
+            color: $black;
+            padding: 0 1.5rem;
+        }
+
+        label {
+            font-size: 2.2rem;
+            padding-right: 1.5rem;
+            color: $black;
+            cursor: pointer;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+    }
+
+    .shopping-cart {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        padding: 1rem;
+        border-radius: .5rem;
+        box-shadow: $box-shadow;
+        width: 35rem;
+        background: $white;
+        @include transition(right, .4s, linear);
+
+        &.active {
+            right: 2rem;
+        }
+
+        .box {
+            @include flex-center(row, flex-start, center);
+            gap: 1rem;
+            position: relative;
+            margin: 1rem 0;
+
+            img {
+                height: 10rem;
+            }
+
+            .fa-trash {
+                font-size: 2rem;
+                position: absolute;
+                top: 50%;
+                right: 2rem;
+                cursor: pointer;
+                color: $light-color;
+                transform: translateY(-50%);
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+
+            .content {
+                h3 {
+                    color: $black;
+                    font-size: 1.7rem;
+                    padding-bottom: 1rem;
+                }
+
+                span {
+                    color: $light-color;
+                    font-size: 1.6rem;
+                }
+
+                .quantity {
+                    padding-left: 1rem;
+                }
+            }
+        }
+
+        .total {
+            font-size: 2.5rem;
+            padding: 1rem 0;
+            text-align: center;
+            color: $black;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            margin: 1rem;
+        }
+
+
+    }
+
+    .login-form {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 35rem;
+        box-shadow: $box-shadow;
+        padding: 2rem;
+        border-radius: .5rem;
+        background: $white;
+        text-align: center;
+
+        &.active {
+            right: 2rem;
+            transition: .4s linear;
+
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: $black;
+        }
+
+        .box {
+            width: 100%;
+            margin: .7rem 0;
+            background: $light-white;
+            border-radius: .5rem;
+            padding: 1rem;
+            font-size: 1.6rem;
+            color: $black;
+            text-transform: none;
+        }
+
+        p {
+            font-size: 1.4rem;
+            padding: .5rem 0;
+            color: $light-color;
+
+            a {
+                color: $orange;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+}
+

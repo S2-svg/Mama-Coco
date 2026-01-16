@@ -1,0 +1,37 @@
+.products {
+    .product-slider {
+        padding: 1rem;
+
+        &:first-child {
+            margin-bottom: 2rem;
+        }
+
+        .box {
+            @extend %box-style;
+
+            img {
+                height: 20rem;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                color: $black;
+            }
+
+            .price {
+                font-size: 2rem;
+                color: $light-color;
+                padding: .5rem 0;
+            }
+
+            .stars {
+                i {
+                    font-size: 1.7rem;
+                    color: $orange;
+                    padding: .5rem 0;
+                }
+            }
+        }
+    }
+}
+

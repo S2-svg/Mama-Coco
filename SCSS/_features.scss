@@ -1,0 +1,30 @@
+.features {
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+
+        .box {
+            @extend %box-style;
+
+            img {
+                margin: 1rem 0;
+                height: 15rem;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                line-height: 1.8;
+                color: $black;
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 1.8;
+                color: $light-color;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+}
